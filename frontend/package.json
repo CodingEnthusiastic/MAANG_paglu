@@ -10,12 +10,16 @@
     "dev": "vite",
     "build": "vite build",
     "desktop": "electron .",
-    "dist": "electron-builder --linux"
+    "dist": "vite build && electron-builder --linux",
+    "dist:linux": "vite build && electron-builder --linux",
+    "dist:mac": "vite build && electron-builder --mac",
+    "dist:win": "vite build && electron-builder --win"
   },
   "build": {
     "appId": "com.contextforge.ui",
     "productName": "ContextForge",
     "files": [
+      "dist/**",
       "electron/**",
       "package.json"
     ],
