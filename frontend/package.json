@@ -6,14 +6,18 @@
   "main": "electron/main.cjs",
   "author": { "name": "ContextForge Team", "email": "team@contextforge.dev" },
   "homepage": "http://contextforge-ui-271740378665.s3-website.us-east-1.amazonaws.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeCraftsmanRaj/MAANG_paglu"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "desktop": "electron .",
-    "dist": "vite build && electron-builder --linux",
-    "dist:linux": "vite build && electron-builder --linux",
-    "dist:mac": "vite build && electron-builder --mac",
-    "dist:win": "vite build && electron-builder --win"
+    "dist": "vite build && electron-builder --linux --publish never",
+    "dist:linux": "vite build && electron-builder --linux --publish never",
+    "dist:mac": "vite build && electron-builder --mac --publish never",
+    "dist:win": "vite build && electron-builder --win --publish never"
   },
   "build": {
     "appId": "com.contextforge.ui",
